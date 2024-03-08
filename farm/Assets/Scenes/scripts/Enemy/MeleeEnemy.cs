@@ -81,4 +81,14 @@ public class MeleeEnemy : MonoBehaviour
         //pool fireballs 
 
     }
+
+    /*private int FindFireball()
+    {
+       for(int i=0; i<fireBalls.Length; i++)
+        {
+            if (!fireBalls[i].activeInHierarchy)
+                return i;
+        }
+        return 0;
+    }*/
 }
