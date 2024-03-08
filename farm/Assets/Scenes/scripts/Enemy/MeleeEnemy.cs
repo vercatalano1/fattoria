@@ -5,11 +5,18 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
+    [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject[] fireBalls;
     [SerializeField] private float range;
-    [SerializeField] private float colliderDistance;
     [SerializeField] private int damage;
+
+    [Header("Collider Parameters")]
+    [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D BoxCollider;
+
+    [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
@@ -17,9 +24,12 @@ public class MeleeEnemy : MonoBehaviour
     private Animator anim;
     private Health playerHealth;
 
+    private EnemyPatrol enemyPatrol;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
 
     private void Update()
@@ -35,7 +45,10 @@ public class MeleeEnemy : MonoBehaviour
                 anim.SetTrigger("meleeAttack");
            }
         }
-        
+
+        if (enemyPatrol != null)
+            enemyPatrol.enabled = !PlayerInSight();
+
     }
 
     private bool PlayerInSight()
@@ -62,5 +75,10 @@ public class MeleeEnemy : MonoBehaviour
         // If player stil in range damage him 
         if (PlayerInSight())
             playerHealth.TakeDamage(damage);
+
+        //pool fireballs 
+
+        fireBalls[0].transform.position = firePoint.position;
+        fireBalls[0].GetComponent<Project>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 }
