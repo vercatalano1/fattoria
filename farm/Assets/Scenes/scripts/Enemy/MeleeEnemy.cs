@@ -41,9 +41,11 @@ public class MeleeEnemy : MonoBehaviour
         {
            if(cooldownTimer >= attackCooldown)
            {
-            cooldownTimer = 0;
-                anim.SetTrigger("meleeAttack");
-           }
+            anim.SetTrigger("meleeAttack");
+                cooldownTimer = 0;
+                fireBalls[0].transform.position = firePoint.position;
+                fireBalls[0].GetComponent<Project>().SetDirection(Mathf.Sign(transform.localScale.x));
+            }
         }
 
         if (enemyPatrol != null)
@@ -78,7 +80,5 @@ public class MeleeEnemy : MonoBehaviour
 
         //pool fireballs 
 
-        fireBalls[0].transform.position = firePoint.position;
-        fireBalls[0].GetComponent<Project>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 }
