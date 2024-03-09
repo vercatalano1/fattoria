@@ -34,6 +34,8 @@ public class SwordPlayer : MonoBehaviour
         hit = true;
         boxcollider.enabled = false;
         anim.SetTrigger("swordExplode");
+        if (collision.tag == "Enemy")
+            collision.GetComponent<Health>().TakeDamage(1);
 
     }
 
