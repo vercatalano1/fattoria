@@ -10,7 +10,7 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireBalls;
     [SerializeField] private float range;
-    [SerializeField] private int damage;
+    [SerializeField] private float damage;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;

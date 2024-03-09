@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
+    [SerializeField] private Transform swordPoint;
+    [SerializeField] private GameObject[] sword;
     private Animator anim;
     private movement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
@@ -28,5 +30,17 @@ public class PlayerAttack : MonoBehaviour
     {
         anim.SetTrigger("attack");
         cooldownTimer = 0;
+        sword[FindSword()].transform.position = swordPoint.position;
+        sword[FindSword()].GetComponent<Project>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
+
+    private int FindSword()
+    {
+       for(int i=0; i<sword.Length; i++)
+        {
+            if (!sword[i].activeInHierarchy)
+                return i;
+        }
+        return 0;
     }
 }
