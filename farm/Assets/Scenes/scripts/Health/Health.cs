@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
             if (!dead)
             { 
                 //Player
-                /*if(GetComponent<movement>() != null)
+                if(GetComponent<movement>() != null)
                    GetComponent<movement>().enabled = false;
 
                 //Enemy
@@ -57,10 +57,10 @@ public class Health : MonoBehaviour
                     GetComponentInParent<EnemyPatrol>().enabled = false;
 
                 if(GetComponent<MeleeEnemy>() != null)
-                    GetComponent<MeleeEnemy>().enabled = false;*/
+                    GetComponent<MeleeEnemy>().enabled = false;
 
-                foreach (Behaviour component in components)
-                    component.enabled = false;
+                /*foreach (Behaviour component in components)
+                    component.enabled = false;*/
 
                 anim.SetBool("grounded", true);
                 anim.SetTrigger("die");
