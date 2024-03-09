@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7269717155786505428}
   - component: {fileID: 4152283208746634732}
   - component: {fileID: 6736956286438653035}
+  - component: {fileID: 3803302950177866549}
   m_Layer: 11
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 20daa800a641d9e4cae18a06630db1ef, type: 3}
-  m_Color: {r: 0.990566, g: 0.990566, b: 0.96626914, a: 1}
+  m_Color: {r: 0.9528302, g: 0.18480352, b: 0.1204521, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169,6 +170,9 @@ MonoBehaviour:
   startingHealth: 3
   iFramesDuration: 2
   numberOfFlashes: 1
+  components: []
+  deathSound: {fileID: 0}
+  hurtSound: {fileID: 0}
 --- !u!114 &6736956286438653035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +195,17 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
+  attackSound: {fileID: 0}
+--- !u!114 &3803302950177866549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70799941122390261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c883e32a3d6a3b24fb93936dda9e8aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
