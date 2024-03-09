@@ -25,15 +25,16 @@ public class PlayerAttack : MonoBehaviour
         cooldownTimer += Time.deltaTime;
 
     }
-
+   
     private void Attack()
     {
         anim.SetTrigger("attack");
         cooldownTimer = 0;
         sword[FindSword()].transform.position = swordPoint.position;
         sword[FindSword()].GetComponent<Project>().SetDirection(Mathf.Sign(transform.localScale.x));
+        
     }
-
+    
     private int FindSword()
     {
        for(int i=0; i<sword.Length; i++)
@@ -43,4 +44,6 @@ public class PlayerAttack : MonoBehaviour
         }
         return 0;
     }
+
+    
 }
