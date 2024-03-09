@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
         anim.SetTrigger("attack");
         cooldownTimer = 0;
         sword[FindSword()].transform.position = swordPoint.position;
-        sword[FindSword()].GetComponent<Project>().SetDirection(Mathf.Sign(transform.localScale.x));
+        sword[FindSword()].GetComponent<SwordPlayer>().SetDirection(Mathf.Sign(transform.localScale.x));
         
     }
     

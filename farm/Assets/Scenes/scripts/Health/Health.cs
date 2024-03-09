@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             { 
-                anim.SetTrigger("died");
+                anim.SetTrigger("die");
 
                 //Player
                 if(GetComponent<movement>() != null)
