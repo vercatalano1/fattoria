@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform swordPoint;
     [SerializeField] private GameObject[] sword;
+    [SerializeField]private AudioClip swordSound;
+
     private Animator anim;
     private movement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
@@ -28,6 +30,7 @@ public class PlayerAttack : MonoBehaviour
    
     private void Attack()
     {
+        SoundManager.instance.PlaySound(swordSound);
         anim.SetTrigger("attack");
         cooldownTimer = 0;
         sword[FindSword()].transform.position = swordPoint.position;
