@@ -75,7 +75,7 @@ public class LoginPAge : MonoBehaviour
         MessageText.text = "No Email Found";
     }
 
-    private void OnRecoverySuccess(SendAccountRecoveryEmailResult result)
+    private void OnRecoverySuccess(SendAccountRecoveryEmailResult obj)
     {
         OpenLoginPage();
         MessageText.text = "Recovery Mail Sent";
