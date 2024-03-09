@@ -2946,7 +2946,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4642,6 +4642,7 @@ MonoBehaviour:
   startingHealth: 3
   iFramesDuration: 2
   numberOfFlashes: 3
+  components: []
   deathSound: {fileID: 8300000, guid: d3267421de1df9a4d8e8fe3fb5442c81, type: 3}
   hurtSound: {fileID: 8300000, guid: acf496056adace8458e202e169abf318, type: 3}
 --- !u!1 &630236218
