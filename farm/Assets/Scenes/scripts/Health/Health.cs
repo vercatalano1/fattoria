@@ -16,6 +16,10 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
 
+    [Header("Component")]
+    [SerializeField] private Behaviour[] components;
+    private bool invulnerable;
+
     [Header("Death Sound")]
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hurtSound;
@@ -30,6 +34,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
+        if (invulnerable)
+            return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
         if (currentHealth > 0)
@@ -42,10 +48,8 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             { 
-                anim.SetTrigger("die");
-
                 //Player
-                if(GetComponent<movement>() != null)
+                /*if(GetComponent<movement>() != null)
                    GetComponent<movement>().enabled = false;
 
                 //Enemy
@@ -53,7 +57,13 @@ public class Health : MonoBehaviour
                     GetComponentInParent<EnemyPatrol>().enabled = false;
 
                 if(GetComponent<MeleeEnemy>() != null)
-                    GetComponent<MeleeEnemy>().enabled = false;
+                    GetComponent<MeleeEnemy>().enabled = false;*/
+
+                foreach (Behaviour component in components)
+                    component.enabled = false;
+
+                anim.SetBool("grounded", true);
+                anim.SetTrigger("die");
 
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
