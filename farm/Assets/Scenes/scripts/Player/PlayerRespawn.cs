@@ -16,7 +16,7 @@ public class PlayerRespawn : MonoBehaviour
         transform.position = currentCheckpoint.position; // Move player to checkpoint position
         playerHealth.Respawn(); //Restore player halth and reset animation 
 
-        //Move camerat to checkpoint room (or this to work the checkpoint objects has to be placed
+        //Move camerat to checkpoint room (for this to work the checkpoint objects has to be placed
         //as a child of the room object)
         Camera.main.GetComponent<CameraController>().MoveToNewRoom(currentCheckpoint.parent);
 
