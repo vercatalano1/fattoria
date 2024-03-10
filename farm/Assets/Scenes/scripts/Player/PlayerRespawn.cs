@@ -24,7 +24,7 @@ public class PlayerRespawn : MonoBehaviour
         }
 
         playerHealth.Respawn(); //Restore player halth and reset animation 
-        transform.position = currentCheckpoint.position; // Move player to checkpoint position
+        transform.position = currentCheckpoint.position; // Move player to checkpoint position 
        
 
         //Move camerat to checkpoint room (for this to work the checkpoint objects has to be placed
@@ -36,7 +36,7 @@ public class PlayerRespawn : MonoBehaviour
     //Activate  checkpoints 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Checkpoint") ;
+        if (collision.transform.tag == "Checkpoint") ;
         {
             currentCheckpoint = collision.transform; //Store thecheckpoint that we activated as the current one 
             SoundManager.instance.PlaySound(checkpointSound);
