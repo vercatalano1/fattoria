@@ -36,7 +36,7 @@ public class PlayerRespawn : MonoBehaviour
     //Activate  checkpoints 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Checkpoint") ;
+        if (collision.gameObject.tag == ("Checkpoint"))
         {
             currentCheckpoint = collision.transform; //Store thecheckpoint that we activated as the current one 
             SoundManager.instance.PlaySound(checkpointSound);

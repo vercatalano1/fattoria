@@ -169,10 +169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   iFramesDuration: 2
-  numberOfFlashes: 1
+  numberOfFlashes: 3
   components: []
-  deathSound: {fileID: 0}
-  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: d3267421de1df9a4d8e8fe3fb5442c81, type: 3}
+  hurtSound: {fileID: 8300000, guid: acf496056adace8458e202e169abf318, type: 3}
 --- !u!114 &6736956286438653035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,17 +185,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c51ccc1f4122c45b6391ef60785671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 2
+  attackCooldown: 1
   firePoint: {fileID: 0}
   fireBalls: []
   range: 2.5
-  damage: 2
+  damage: 0.5
   colliderDistance: 0.45
   BoxCollider: {fileID: 7269717155786505428}
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 7f35c8fc40a7f4041bf77ada260acf09, type: 3}
 --- !u!114 &3803302950177866549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,4 +208,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c883e32a3d6a3b24fb93936dda9e8aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0.5
