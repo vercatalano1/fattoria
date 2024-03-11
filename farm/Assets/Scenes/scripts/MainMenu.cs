@@ -34,13 +34,13 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
-    public void PauseGame()
+    public void PauseGame(bool status)
     {
-        /*pauseScreen.SetActive(status);
+       pauseScreen.SetActive(status);
 
         if (status)
             Time.timeScale = 0;
-        else*/
+        else
             Time.timeScale = 1;
     }
 }
