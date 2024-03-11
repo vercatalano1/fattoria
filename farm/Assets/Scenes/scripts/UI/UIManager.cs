@@ -43,6 +43,8 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    
+
     public void Quit()
     {
         Application.Quit();
@@ -53,7 +55,18 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
-# region Puse
+    #region Pause
+    public void PauseMenu()
+    {
+        pauseScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void resume()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
+    }
     public void PauseGame(bool status)
     {
         pauseScreen.SetActive(status);

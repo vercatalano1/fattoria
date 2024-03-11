@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,11 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         
+    }
+    public void resume()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Restart()
