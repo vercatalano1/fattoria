@@ -50,6 +50,9 @@ TagManager:
   - name: Fareground
     uniqueID: 658638979
     locked: 0
+  - name: Sign
+    uniqueID: 1807783431
+    locked: 0
   - name: Player
     uniqueID: 3841406229
     locked: 0
