@@ -3870,7 +3870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11, y: 0}
+  m_AnchoredPosition: {x: -11.000092, y: 0}
   m_SizeDelta: {x: -2106, y: -840}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &432770862
@@ -9283,7 +9283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -10.000092, y: 0}
   m_SizeDelta: {x: -2106, y: -840}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &869158886
@@ -13471,9 +13471,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5104578588521913058, guid: 88b6f809b0dcf3549898317ea1d3a3f5, type: 3}
       propertyPath: dialogue.Array.data[2]
-      value: L'Antico Dragone ha rapito la principessa e tu sei l'unico guerriero
-        in grado di sconfiggere i draghi e riposrtare la principessa al suo castello,
-        aiutaci!
+      value: L'Antico Dragone ha rapito la principessa e nascosta dentro una caverna.
+        Tu sei l'unico guerriero in grado di sconfiggere i draghi e riportare la
+        principessa al suo castello, aiutaci!
       objectReference: {fileID: 0}
     - target: {fileID: 5329040170025140005, guid: 88b6f809b0dcf3549898317ea1d3a3f5, type: 3}
       propertyPath: m_Size.x

@@ -1188,9 +1188,17 @@ MonoBehaviour:
   dialoguePanel: {fileID: 328694254}
   dialogueText: {fileID: 802761844}
   dialogue:
-  - 
-  - 
-  - 
+  - "Ti stavo aspettando, Dragonsbane! Hai superato trappole mortali e sconfitto
+    draghi ma se proseguirai in questo modo, L'Antico Dragone non ti permetter\xE0
+    mai di salvare la principessa."
+  - "I draghi non sono ci\xF2 che sembrano. Sono creature timide  e spaventate, ma
+    anche loro hanno un cuore.."
+  - "Loro sono stati cacciati dalle loro terre originarie dai loro stessi simili
+    ed ora vivono nell'ombra temendo il mondo esterno. Ma la principessa \xE8 stata
+    l'unica a capire il loro segreto."
+  - "Devi raggiungere il cuore dell'Antico Dragone e solo cos\xEC potrai liberare
+    la principessa!"
+  - TO BE CONTINUED...
   wordSpeed: 0.06
   playerIsClose: 0
 --- !u!61 &106541312
@@ -3629,7 +3637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &328694255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21052,7 +21060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.1450195, y: -4.2900085}
+  m_AnchoredPosition: {x: 2.1450195, y: -4.290039}
   m_SizeDelta: {x: 2097.832, y: 840.849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917279032
