@@ -21,14 +21,14 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMovement.canAttack())
+        if (Input.GetKeyDown(KeyCode.C) && cooldownTimer > attackCooldown && playerMovement.canAttack()) 
             Attack();
 
         cooldownTimer += Time.deltaTime;
 
     }
    
-    private void Attack()
+    public void Attack()
     {
         SoundManager.instance.PlaySound(swordSound);
         anim.SetTrigger("attack");

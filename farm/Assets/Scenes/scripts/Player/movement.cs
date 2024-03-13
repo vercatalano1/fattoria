@@ -33,8 +33,11 @@ public class movement : MonoBehaviour
    private float wallJumpCooldown;
    private float horizontalInput;
 
+   public Joystick joystick;
+
    [Header("Sounds")]
    [SerializeField]private AudioClip jumpSound;
+
   private void Awake()
     {
         //Grab references for rigidbody and animator from object
@@ -45,13 +48,18 @@ public class movement : MonoBehaviour
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        //horizontalInput = Input.GetAxis("Horizontal");
+
+        horizontalInput = joystick.Horizontal* speed;
 
         //flip player when moving left-right
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
+
+       // horizontalInput = joystick.Horizontal * speed;
+       // transform.position += new Vector3(horizontalInput, 0, 0) * Time.deltaTime * speed;
 
         //Set animator parameters 
         anim.SetBool("run", horizontalInput != 0);
@@ -81,10 +89,13 @@ public class movement : MonoBehaviour
         else
             wallJumpCooldown += Time.deltaTime;*/
 
-        if(Input.GetKeyDown(KeyCode.Space))
-            Jump();
+        float verticalMove = joystick.Vertical;
 
-        if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
+        //if(Input.GetKeyDown(KeyCode.Space))
+        if(verticalMove > 0.3f)
+                   Jump();
+
+        if (verticalMove<-0.3f && body.velocity.y > 0) //Input.GetKeyUp(KeyCode.Space)
             body.velocity = new Vector2(body.velocity.x, body.velocity.y / 2);
 
         if (onWall())
@@ -95,7 +106,7 @@ public class movement : MonoBehaviour
         else
         {
             body.gravityScale = 7;
-            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y); //horizontalInput 
 
 
             if (isGrounded())
