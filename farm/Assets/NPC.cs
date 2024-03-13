@@ -52,7 +52,7 @@ public class NPC : MonoBehaviour
                 dialogueText.text = dialogue[index];
             }
 
-
+           
         }
     }
 
@@ -64,29 +64,29 @@ public class NPC : MonoBehaviour
 
 
 
-    /* public void zeroText()
-     {
-         dialogueText.text = "";
-         index = 0;
-         dialoguePanel.SetActive(false);
-     }*/
+   /* public void zeroText()
+    {
+        dialogueText.text = "";
+        index = 0;
+        dialoguePanel.SetActive(false);
+    }*/
 
 
 
     IEnumerator Typing()
     {
-        foreach (char letter in dialogue[index].ToCharArray())
+        foreach (char letter in dialogue[index].ToCharArray()) 
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
     }
 
-
+   
 
     public void NextLine()
     {
-        // contButtom.SetActive(false);
+       // contButtom.SetActive(false);
 
 
         if (index < dialogue.Length - 1)
@@ -105,16 +105,14 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if (other.CompareTag("Player")){
             playerIsClose = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if (other.CompareTag("Player")){
             playerIsClose = false;
             //zeroText();
             dialoguePanel.SetActive(false);
