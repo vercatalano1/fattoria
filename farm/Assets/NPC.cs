@@ -119,6 +119,36 @@ public class NPC : MonoBehaviour
 
         }
     }
+
+    // Metodo chiamato quando il pulsante viene premuto
+    public void OnButtonClick()
+    {
+        ToggleDialoguePanel();
+    }
+
+    // Metodo per aprire o chiudere il pannello del dialogo
+    private void ToggleDialoguePanel()
+    {
+        if (dialoguePanel.activeInHierarchy)
+        {
+            dialoguePanel.SetActive(false);
+        }
+        else
+        {
+            dialoguePanel.SetActive(true);
+            StartCoroutine(Typing());
+        }
+
+        if (dialogueText.text == dialogue[index])
+        {
+            NextLine();
+        }
+        else
+        {
+            StopAllCoroutines();
+            dialogueText.text = dialogue[index];
+        }
+    }
 }
 
 
