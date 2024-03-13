@@ -3062,9 +3062,9 @@ MonoBehaviour:
   dialoguePanel: {fileID: 902077221}
   dialogueText: {fileID: 2081156315}
   dialogue:
-  - Benvenuto nel regno di Drakonia, dove regnano i draghi, creature mostruose e
-    potenti che dominano i cieli e la terra con la loro presenza imponente. Tu devi
-    essere Dragonsbane, il potente guerriero dal cuore coraggioso e la spada affilata!
+  - Benvenuto a Drakonia, dove regnano i draghi, creature mostruose e potenti che
+    dominano i cieli e la terra con la loro presenza imponente. Tu devi essere Dragonsbane,
+    il potente guerriero dal cuore coraggioso e la spada affilata!
   - "Una creatura oscura e malvagia, conosciuta come l'Antico Dragone, \xE8 emersa
     dalle profondit\xE0 della terra e sta minacciando di distruggere la citt\xE0
     di Valderia e di sottomettere il nostro popolo."
@@ -27256,10 +27256,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 09630f2d85fcc84478de724742e678d8, type: 3}
-    m_FontSize: 40
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
